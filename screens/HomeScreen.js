@@ -1,19 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import tw from 'tailwind-react-native-classnames';
+import NavOptions from '../components/NavOptions';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={tw`bg-white h-full`}>
+    <SafeAreaView style={tw`bg-white h-full p-2`}>
       <View>
         <Image
             style={{
-                width: 10
+                width: 100,
+                height: 100,
+                resizeMode: 'contain'
             }}
-            sorce={{
-                uri: "../assets/images/Uber-Logo.wine.png",
-            }}
+            source={require('../assets/images/uber.png')}
          />
+
+         <NavOptions />
       </View>
     </SafeAreaView>
   )
